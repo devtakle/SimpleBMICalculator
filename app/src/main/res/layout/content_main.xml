@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.devtakle.bmicalculator.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewWeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewWeight"
+        android:layout_marginTop="109dp"
+        android:text="Age" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextWeight"
+        android:layout_alignBottom="@+id/editTextWeight"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/editTextWeight"
+        android:layout_toStartOf="@+id/editTextWeight"
+        android:text="Weight" />
+
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewWeight"
+        android:layout_alignStart="@+id/textViewWeight"
+        android:layout_below="@+id/editTextWeight"
+        android:layout_marginTop="30dp"
+        android:text="Height" />
+
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="Calculate"
+        android:layout_below="@+id/editTextFt"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewAge"
+        android:layout_alignBottom="@+id/textViewAge"
+        android:layout_alignLeft="@+id/editTextFt"
+        android:layout_alignStart="@+id/editTextFt"
+        android:ems="10"
+        android:hint="years"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignLeft="@+id/editTextAge"
+        android:layout_alignStart="@+id/editTextAge"
+        android:layout_below="@+id/editTextAge"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="pounds"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextFt"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewHeight"
+        android:layout_alignBottom="@+id/textViewHeight"
+        android:layout_toLeftOf="@+id/buttonCalc"
+        android:layout_toStartOf="@+id/buttonCalc"
+        android:ems="10"
+        android:hint="feet"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:singleLine="false" />
+
+    <EditText
+        android:id="@+id/editTextInches"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextFt"
+        android:layout_alignBottom="@+id/editTextFt"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/editTextFt"
+        android:layout_toRightOf="@+id/editTextFt"
+        android:ems="10"
+        android:hint="inches"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCalc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/textBMIAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textResult"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@+id/textCategory"
+        android:layout_toStartOf="@+id/textCategory" />
+
+    <TextView
+        android:id="@+id/textAdvice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textNormalRange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp" />
+
+    <TextView
+        android:id="@+id/textNormalRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textBMIAns"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/textCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBMIAns"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textResult"
+        android:layout_toRightOf="@+id/textResult" />
+
+</RelativeLayout>
