@@ -64,18 +64,18 @@ public class MainActivity extends AppCompatActivity {
                                     if (bmi < 18.5) {
                                         textCategory.setTextColor(Color.rgb(0, 0, 255));
                                         textCategory.setText("Underweight");
-                                        pounds = Math.round((25 * Math.pow(inches, 2)) / 703 - weight);
+                                        pounds = Math.round((18.5 * Math.pow(inches, 2)) / 703 - weight);
 
                                         textAdvice.setText("You will need to gain " + pounds + " lbs to reach a BMI of 18.5");
                                     } else if (bmi > 25 & bmi < 30) {
                                         textCategory.setTextColor(Color.rgb(255, 0, 0));
                                         textCategory.setText("Overweight");
-                                        pounds = Math.round(weight - (18.5 * Math.pow(inches, 2)) / 703);
+                                        pounds = Math.round(weight - (25 * Math.pow(inches, 2)) / 703);
                                         textAdvice.setText("You will need to lose " + pounds + " lbs to reach a BMI of 25");
                                     } else if (bmi >= 30) {
                                         textCategory.setTextColor(Color.rgb(255, 100, 0));
                                         textCategory.setText("Obese");
-                                        pounds = Math.round(weight - (18.5 * Math.pow(inches, 2)) / 703);
+                                        pounds = Math.round(weight - (25 * Math.pow(inches, 2)) / 703);
                                         textAdvice.setText("You will need to lose " + pounds + " lbs to reach a BMI of 25");
                                     } else {
                                         textCategory.setTextColor(Color.rgb(0, 255, 0));
